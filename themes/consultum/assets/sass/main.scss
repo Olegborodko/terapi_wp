@@ -15,12 +15,4 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 @import "./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css";
 
-body, html{
-  margin: 0;
-  padding: 0;
-}
-
-div.custom-containder{
-  max-width: 1952px; // 1920
-  padding: 0 16px;
-}
+@import "./general";

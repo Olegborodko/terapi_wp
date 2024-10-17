@@ -36,8 +36,8 @@
     "map": false
   },
   "scripts": {
-    "watch": "sass --watch --no-source-map  ./assets/sass/main.scss ./style.css",
-    "css": "sass --no-source-map ./assets/sass/main.scss ./style.css",
-    "rtl": "rtlcss style.css style-rtl.css"
+    "watch": "sass --watch --no-source-map ./assets/sass/main.scss ./style.css && rtlcss ./style.css ./style-rtl.css",
+    "css": "sass --no-source-map ./assets/sass/main.scss ./style.css && rtlcss ./style.css ./style-rtl.css",
+    "rtl": "rtlcss ./style.css ./style-rtl.css"
   }
 }
