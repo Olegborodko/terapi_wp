@@ -32,33 +32,56 @@ html {
 
 .custom-containder {
   max-width: 1472px;
-  padding: 0 16px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
 .btn-default {
-  padding: 9px 30px;
+  padding: 0.5625rem 1.875rem;
   background-color: #866B7E;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   color: #FFF;
   text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: #000;
   font-family: "Inter";
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
+header .navbar {
+  padding: 1.6875rem 0;
+}
 header #navbarNav {
   justify-content: center;
 }
-header .nav-item a.active {
+header .menu-item a.active {
   color: #866B7E;
   font-family: "Inter";
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
+  text-decoration: none;
 }
-header .nav-item a {
+header .menu-item a {
   color: #181818;
+  text-decoration: none;
+  padding: 0 2.1875rem;
+}
+header .logo-block {
+  order: 3;
+}
+@media (max-width: 960px) {
+  header #menu-top li {
+    padding: 0.625rem 0;
+  }
+  header #menu-top li a {
+    padding: 0;
+  }
+  header #menu-top li:first-child {
+    padding: 1.25rem 0 0.625rem 0;
+  }
+  header .logo-block {
+    order: initial;
+  }
 }

@@ -32,27 +32,25 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <a href="" class="btn btn-default">צור איתנו קשר</a>
-          
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Главная</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">О нас</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Услуги</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-              </li>
-            </ul>
+          <a href="" class="btn btn-default d-none d-lg-block">צור איתנו קשר</a>
+
+          <div class="logo-block">
+            <?php $logo_url = get_template_directory_uri() . '/assets/img/logo.svg'; ?>
+            <a class="logo ms-auto" href="#"><img src="<?= esc_url($logo_url) ?>" alt="logo"></a>
           </div>
-          <div>
-          <?php $logo_url = get_template_directory_uri() . '/assets/img/logo.svg'; ?>
-          <a class="logo ms-auto" href="#"><img src="<?= esc_url($logo_url) ?>" alt="logo"></a>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <?php
+            wp_nav_menu(array(
+              'theme_location' => 'top',
+              'menu_class'     => 'navbar-nav',
+              'container'      => false,
+              'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              'link_class'     => 'nav-link',
+              'li_class'       => 'nav-item',
+            ));
+            ?>
+          </div>
         </div>
       </nav>
     </header>

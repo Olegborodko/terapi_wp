@@ -1,16 +1,45 @@
 header {
+  .navbar {
+    padding: 1.6875rem 0;
+  }
+
   #navbarNav {
     justify-content: center;
   }
 
-  .nav-item a.active {
+  .menu-item a.active {
     color: $menu-text-active;
     font-family: $font-inter;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
+    text-decoration: none;
   }
 
-  .nav-item a {
+  .menu-item a {
     color: $menu-text;
+    text-decoration: none;
+    padding: 0 2.1875rem;
+  }
+
+  .logo-block{
+    order: 3;
+  }
+
+  @media (max-width: 960px) {
+    #menu-top li{
+      padding: .625rem 0;
+
+      a{
+        padding: 0;
+      }
+    }
+
+    #menu-top li:first-child{
+      padding: 1.25rem 0 .625rem 0;
+    }
+
+    .logo-block{
+      order: initial;
+    }
   }
 }

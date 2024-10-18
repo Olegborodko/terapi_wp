@@ -17,20 +17,20 @@ $font-inter: 'Inter';
 
 .custom-containder {
   max-width: 1472px; //1440
-  padding: 0 16px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
 .btn-default {
-  padding: 9px 30px;
+  padding: .5625rem 1.875rem;
   background-color: $btn-default;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   color: #FFF;
   text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px .25rem .25rem rgba(0, 0, 0, 0.5);
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: #000;
   font-family: $font-inter;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 }

@@ -49,7 +49,7 @@ function consultum_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'consultum' ),
+			'top' => esc_html__( 'Top menu', 'consultum' ),
 		)
 	);
 
@@ -138,7 +138,8 @@ add_action( 'widgets_init', 'consultum_widgets_init' );
  * Enqueue scripts and styles.
  */
 function consultum_scripts() {
-	wp_enqueue_style( 'consultum-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// wp_enqueue_style( 'consultum-style', get_stylesheet_uri(), array(), _S_VERSION );
+  wp_enqueue_style( 'consultum-style', get_stylesheet_uri(), array(), time() );
 	wp_style_add_data( 'consultum-style', 'rtl', 'replace' );
 
 	// wp_enqueue_script( 'consultum-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
