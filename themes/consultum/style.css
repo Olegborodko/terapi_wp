@@ -85,3 +85,11 @@ header .logo-block {
     order: initial;
   }
 }
+
+footer {
+  background-color: #3F3E43;
+  padding: 6rem 0;
+}
+footer .footer-block {
+  display: flex;
+}
