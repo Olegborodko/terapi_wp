@@ -1,9 +1,36 @@
-body, html{
+body,
+html {
   margin: 0;
   padding: 0;
 }
 
-div.custom-containder {
+$bgcolor: #F1E6EA;
+$menu-text-active: #866B7E;
+$menu-text: #181818;
+$btn-default: $menu-text-active;
+
+$font-inter: 'Inter';
+
+.general_bg_color {
+  background-color: $bgcolor;
+}
+
+.custom-containder {
   max-width: 1472px; //1440
   padding: 0 16px;
+  margin: 0 auto;
+}
+
+.btn-default {
+  padding: 9px 30px;
+  background-color: $btn-default;
+  border-radius: 100px;
+  color: #FFF;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #000;
+  font-family: $font-inter;
+  font-size: 16px;
+  font-weight: 400;
 }

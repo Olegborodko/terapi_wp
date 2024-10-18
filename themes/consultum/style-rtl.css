@@ -22,3 +22,7 @@ div.custom-containder {
   max-width: 1472px;
   padding: 0 16px;
 }
+
+header .navbar {
+  background-color: #F1E6EA;
+}

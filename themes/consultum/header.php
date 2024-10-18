@@ -24,14 +24,16 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <div id="page" class="site">
-    <header class="">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div id="page" class="site general_bg_color">
+    <header class="custom-containder">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Логотип</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <a href="" class="btn btn-default">צור איתנו קשר</a>
+          
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -48,6 +50,9 @@
               </li>
             </ul>
           </div>
+          <div>
+          <?php $logo_url = get_template_directory_uri() . '/assets/img/logo.svg'; ?>
+          <a class="logo ms-auto" href="#"><img src="<?= esc_url($logo_url) ?>" alt="logo"></a>
         </div>
       </nav>
     </header>

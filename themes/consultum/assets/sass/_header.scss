@@ -1,0 +1,16 @@
+header {
+  #navbarNav {
+    justify-content: center;
+  }
+
+  .nav-item a.active {
+    color: $menu-text-active;
+    font-family: $font-inter;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .nav-item a {
+    color: $menu-text;
+  }
+}
