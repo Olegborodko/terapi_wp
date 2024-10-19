@@ -142,3 +142,57 @@ footer .footer-menu li {
     text-align: center;
   }
 }
+
+.cards-1 {
+  display: flex;
+  justify-content: center;
+}
+.cards-1 .block {
+  border-radius: 1.25rem;
+  width: 25.625rem;
+  height: 15.125rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 1rem;
+  overflow: hidden;
+}
+.cards-1 h3 {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.cards-1 .description {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.cards-1 .text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.cards-1 .image-block {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+.cards-1 .image {
+  align-self: flex-end;
+  border-radius: 0 0 0 1.25rem;
+  height: 90%;
+}
+@media (max-width: 1140px) {
+  .cards-1 {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 540px) {
+  .cards-1 .block {
+    width: 20.0625rem;
+    height: 8.125rem;
+  }
+}

@@ -1,0 +1,7 @@
+.interface-complementary-area__fill {
+  width: 320px!important;
+}
+
+.interface-complementary-area.editor-sidebar {
+  width: 320px!important;
+}

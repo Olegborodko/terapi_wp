@@ -183,3 +183,69 @@ require get_template_directory() . '/inc/template-tags.php';
 // 	require get_template_directory() . '/inc/jetpack.php';
 // }
 
+// ==============================
+add_action('admin_enqueue_scripts', 'custom_admin_styles');
+
+function custom_admin_styles() {
+    wp_enqueue_style('custom-admin-styles', get_template_directory_uri() . '/assets/custom-admin-styles.css');
+}
+
+// ==============================
+
+function my_custom_block_categories( $categories, $post ) {
+  $new_category = array(
+      'slug'  => 'terapi-category',
+      'title' => __( 'Terapi', 'text-domain' ),
+      'icon'  => 'star',
+  );
+  $categories[] = $new_category;
+
+  return $categories;
+}
+
+add_filter( 'block_categories_all', 'my_custom_block_categories', 10, 2 );
+
+
+// ===============================
+
+function register_custom_blocks() {
+  $blocks = [
+      [
+          'name' => 'cards-1',
+          'title' => __('Cards 1'),
+          'template' => 'cards-1/template.php'
+      ],
+  ];
+
+  foreach ($blocks as $block) {
+      acf_register_block_type(array(
+          'name'              => $block['name'],
+          'title'             => $block['title'],
+          'description'       => __(''),
+          'render_callback'   => 'render_custom_block',
+          'category'          => 'terapi-category',
+          'icon'              => 'admin-comments',
+          'keywords'          => array('custom', 'acf'),
+          'enqueue_assets'    => function () use ($block) {
+              // wp_enqueue_style для каждого блока при необходимости
+              // Пример: wp_enqueue_style($block['name'] . '-editor', get_template_directory_uri() . '/blocks/' . $block['name'] . '/editor.css');
+          }
+      ));
+  }
+}
+add_action('acf/init', 'register_custom_blocks');
+
+function render_custom_block($block) {
+  $block_name = $block['name']; 
+  
+  $block_slug = str_replace('acf/', '', $block_name);
+
+  $template_path = get_template_directory() . '/blocks/' . $block_slug . '/template.php';
+
+  if (file_exists($template_path)) {
+      include($template_path);
+  } else {
+      echo 'Template not found: ' . esc_html($template_path);
+  }
+}
+
