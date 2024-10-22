@@ -196,3 +196,16 @@ footer .footer-menu li {
     height: 8.125rem;
   }
 }
+
+.quote-block-un .wp-block-stackable-carousel .stk-block-content {
+  flex-direction: column !important;
+}
+.quote-block-un .wp-block-stackable-carousel .wp-block-stackable-icon {
+  justify-content: flex-start !important;
+}
+.quote-block-un .wp-block-stackable-carousel .stk-block-carousel__dots {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: -1.625rem;
+}

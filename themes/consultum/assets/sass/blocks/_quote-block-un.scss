@@ -1,0 +1,18 @@
+.quote-block-un {
+  .wp-block-stackable-carousel {
+    .stk-block-content {
+      flex-direction: column !important;
+    }
+
+    .wp-block-stackable-icon {
+      justify-content: flex-start !important;
+    }
+
+    .stk-block-carousel__dots {
+      width: 50%;
+      margin: 0 auto;
+      position: relative;
+      top: -1.625rem;
+    }
+  }
+}
