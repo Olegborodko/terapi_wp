@@ -254,3 +254,4 @@ function render_custom_block($block) {
   }
 }
 
+require get_template_directory() . '/functions_parts/articles.php';
