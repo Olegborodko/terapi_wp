@@ -215,6 +215,11 @@ function register_custom_blocks() {
           'title' => __('Cards 1'),
           'template' => 'cards-1/template.php'
       ],
+      [
+        'name' => 'timeline-1',
+        'title' => __('Time-line 1'),
+        'template' => 'timeline-1/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
