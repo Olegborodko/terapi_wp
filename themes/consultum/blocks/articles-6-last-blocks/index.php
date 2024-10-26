@@ -1,5 +1,5 @@
 <?php
-function load_articles_tags_field_choices($field)
+function load_articles_6_last_tags_field_choices($field)
 {
   $terms = get_terms(array(
     'taxonomy' => 'post_tag',
@@ -14,4 +14,4 @@ function load_articles_tags_field_choices($field)
 
   return $field;
 }
-add_filter('acf/load_field/name=articles_tags', 'load_articles_tags_field_choices');
+add_filter('acf/load_field/name=articles_tags', 'load_articles_6_last_tags_field_choices');

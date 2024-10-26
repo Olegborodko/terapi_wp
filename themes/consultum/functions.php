@@ -235,6 +235,11 @@ function register_custom_blocks() {
         'title' => __('Articles-carousel 1'),
         'template' => 'articles-carousel-1/template.php'
       ],
+      [
+        'name' => 'articles-6-last-blocks',
+        'title' => __('Articles 6 last blocks'),
+        'template' => 'articles-6-last-blocks/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
@@ -280,3 +285,5 @@ function render_custom_block($block) {
 
 // =============================== articles-carousel block logic
 include_once get_template_directory() . '/blocks/articles-carousel-1/index.php';
+
+include_once get_template_directory() . '/blocks/articles-6-last-blocks/index.php';

@@ -1,6 +1,3 @@
-<?php
-
-?>
 <div class="articles-carousel-1">
   <div class="swiper articlesSwiperSlider">
     <div class="swiper-wrapper">
@@ -13,7 +10,9 @@
       );
 
       if (!empty($selected_tags)) {
-        $args['tag'] = $selected_tags;
+        if ($selected_tags !== "all") {
+          $args['tag'] = $selected_tags;
+        }
       }
 
       $query = new WP_Query($args);
@@ -25,11 +24,11 @@
           }
       ?>
 
-          <div class="swiper-slide">
+          <a href="<?php the_permalink(); ?>" class="swiper-slide">
             <img src="<?= $image_url ?>" alt="<?php the_title() ?>" />
             <h4><?php the_title(); ?></h4>
             <?php the_excerpt(); ?>
-          </div>
+          </a>
       <?php endwhile;
         wp_reset_postdata();
       else :
