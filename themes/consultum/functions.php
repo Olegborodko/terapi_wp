@@ -240,6 +240,11 @@ function register_custom_blocks() {
         'title' => __('Articles 6 last blocks'),
         'template' => 'articles-6-last-blocks/template.php'
       ],
+      [
+        'name' => 'comments-carousel-1',
+        'title' => __('Comments Carousel 1'),
+        'template' => 'comments-carousel-1/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
@@ -258,6 +263,15 @@ function register_custom_blocks() {
               wp_enqueue_script(
                 'articles-carousel-1-script',
                 get_template_directory_uri() . '/blocks/articles-carousel-1/script.js',
+                array('jquery'),
+                null,
+                true
+              );
+            }
+            if ($block['name'] === 'comments-carousel-1'){
+              wp_enqueue_script(
+                'comments-carousel-1',
+                get_template_directory_uri() . '/blocks/comments-carousel-1/script.js?v=' . time(),
                 array('jquery'),
                 null,
                 true
