@@ -13,8 +13,6 @@ Text Domain: consultum
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
-@import "./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css";
-
 @import "./fonts";
 @import "./general";
 @import "./header";
@@ -22,3 +20,4 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "./blocks/cards-1";
 @import "./blocks/quote-block-un";
 @import "./blocks/timeline-1";
+@import "./blocks/articles-carousel-1";

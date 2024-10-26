@@ -32,6 +32,7 @@ function create_custom_post_type()
     'hierarchical'       => false,
     'menu_position'      => null,
     'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'taxonomies' => array('post_tag'),
   );
 
   register_post_type('articles', $args);

@@ -142,6 +142,10 @@ add_action( 'widgets_init', 'consultum_widgets_init' );
  */
 function consultum_scripts() {
 	// wp_enqueue_style( 'consultum-style', get_stylesheet_uri(), array(), _S_VERSION );
+  wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css' );
+
+  wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/assets/swiper/swiper-bundle.min.css' );
+
   wp_enqueue_style( 'consultum-style', get_stylesheet_uri(), array(), time() );
 	wp_style_add_data( 'consultum-style', 'rtl', 'replace' );
 
@@ -152,6 +156,8 @@ function consultum_scripts() {
 	}
 
   wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap-5.0.2-dist/js/bootstrap.min.js', array(), _S_VERSION, true );
+
+  wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/assets/swiper/swiper-bundle.min.js', array(), _S_VERSION, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'consultum_scripts' );
@@ -190,6 +196,10 @@ function custom_admin_styles() {
     wp_enqueue_style('custom-admin-styles', get_template_directory_uri() . '/assets/custom-admin-styles.css');
 }
 
+// ============================== add custom post type articles
+require_once get_template_directory() . '/functions_parts/articles.php';
+
+
 // ==============================
 
 function my_custom_block_categories( $categories, $post ) {
@@ -220,6 +230,11 @@ function register_custom_blocks() {
         'title' => __('Time-line 1'),
         'template' => 'timeline-1/template.php'
       ],
+      [
+        'name' => 'articles-carousel-1',
+        'title' => __('Articles-carousel 1'),
+        'template' => 'articles-carousel-1/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
@@ -234,6 +249,15 @@ function register_custom_blocks() {
           'enqueue_assets'    => function () use ($block) {
               // wp_enqueue_style для каждого блока при необходимости
               // Пример: wp_enqueue_style($block['name'] . '-editor', get_template_directory_uri() . '/blocks/' . $block['name'] . '/editor.css');
+            if ($block['name'] === 'articles-carousel-1'){
+              wp_enqueue_script(
+                'articles-carousel-1-script',
+                get_template_directory_uri() . '/blocks/articles-carousel-1/script.js',
+                array('jquery'),
+                null,
+                true
+              );
+            }
           }
       ));
   }
@@ -248,10 +272,11 @@ function render_custom_block($block) {
   $template_path = get_template_directory() . '/blocks/' . $block_slug . '/template.php';
 
   if (file_exists($template_path)) {
-      include($template_path);
+      include_once($template_path);
   } else {
       echo 'Template not found: ' . esc_html($template_path);
   }
 }
 
-require get_template_directory() . '/functions_parts/articles.php';
+// =============================== articles-carousel block logic
+include_once get_template_directory() . '/blocks/articles-carousel-1/index.php';
