@@ -7,16 +7,18 @@
   ?>
     <div class="block">
       <img src="<?= esc_url($photo) ?>" class="photo" />
-      <div class="title">
-        <h4>מרי נראל</h4><img src="<?= esc_url($icon) ?>" class="ico" />
-      </div>
-      <div class="description">
-        Lorem ipsum dolor sit amet consectetur.
-      </div>
-      <div class="btn-block">
-        <a href="#" class="btn-white">תחומי התמחות</a>
-        <a href="#" class="btn-white">התמחות</a>
-        <a href="#" class="btn-white">התמחות</a>
+      <div class="mobile-block">
+        <div class="title">
+          <h4>מרי נראל</h4><img src="<?= esc_url($icon) ?>" class="ico" />
+        </div>
+        <div class="description">
+          Lorem ipsum dolor sit amet consectetur.
+        </div>
+        <div class="btn-block">
+          <a href="#" class="btn-white">תחומי התמחות</a>
+          <a href="#" class="btn-white">התמחות</a>
+          <a href="#" class="btn-white">התמחות</a>
+        </div>
       </div>
     </div>
   <?php

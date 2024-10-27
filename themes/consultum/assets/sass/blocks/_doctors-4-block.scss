@@ -30,6 +30,7 @@
 
     .title {
       display: flex;
+      justify-content: center;
     }
 
     h4 {
@@ -53,6 +54,50 @@
       display: block;
       min-width: 6.5625rem;
       padding-bottom: 1.1875rem;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .block {
+      width: 100%;
+      max-width: initial;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: .9375rem .75rem;
+
+      .title {
+        justify-content: flex-start;
+      }
+
+      .description{
+        text-align: right;
+      }
+
+      .btn-block{
+        justify-content: flex-start;
+      }
+
+      img.photo{
+        max-width: 6.5625rem;
+        min-width: 4.375rem;
+        padding-bottom: 0;
+      }
+
+      .mobile-block{
+        padding-right: .625rem;
+      }
+
+      // h4{
+      //   font-size: 1rem;
+      // }
+
+      // .description{
+      //   font-size: .75rem;
+      // }
+
+      // .btn-block a{
+      //   font-size: .625rem;
+      // }
     }
   }
 }

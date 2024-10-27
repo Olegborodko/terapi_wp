@@ -554,6 +554,7 @@ footer .footer-menu li {
 }
 .doctors-4-block .block .title {
   display: flex;
+  justify-content: center;
 }
 .doctors-4-block .block h4 {
   font-size: 1.5rem;
@@ -573,4 +574,30 @@ footer .footer-menu li {
   display: block;
   min-width: 6.5625rem;
   padding-bottom: 1.1875rem;
+}
+@media (max-width: 620px) {
+  .doctors-4-block .block {
+    width: 100%;
+    max-width: initial;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.9375rem 0.75rem;
+  }
+  .doctors-4-block .block .title {
+    justify-content: flex-start;
+  }
+  .doctors-4-block .block .description {
+    text-align: right;
+  }
+  .doctors-4-block .block .btn-block {
+    justify-content: flex-start;
+  }
+  .doctors-4-block .block img.photo {
+    max-width: 6.5625rem;
+    min-width: 4.375rem;
+    padding-bottom: 0;
+  }
+  .doctors-4-block .block .mobile-block {
+    padding-right: 0.625rem;
+  }
 }
