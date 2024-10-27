@@ -245,6 +245,11 @@ function register_custom_blocks() {
         'title' => __('Comments Carousel 1'),
         'template' => 'comments-carousel-1/template.php'
       ],
+      [
+        'name' => 'doctors-carousel-1',
+        'title' => __('Doctors Carousel 1'),
+        'template' => 'doctors-carousel-1/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
@@ -271,7 +276,16 @@ function register_custom_blocks() {
             if ($block['name'] === 'comments-carousel-1'){
               wp_enqueue_script(
                 'comments-carousel-1',
-                get_template_directory_uri() . '/blocks/comments-carousel-1/script.js?v=' . time(),
+                get_template_directory_uri() . '/blocks/comments-carousel-1/script.js',
+                array('jquery'),
+                null,
+                true
+              );
+            }
+            if ($block['name'] === 'doctors-carousel-1'){
+              wp_enqueue_script(
+                'doctors-carousel-1',
+                get_template_directory_uri() . '/blocks/doctors-carousel-1/script.js',
                 array('jquery'),
                 null,
                 true

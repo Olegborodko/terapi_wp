@@ -24,7 +24,7 @@ html {
 }
 
 .btn-default {
-  padding: .5625rem 1.875rem;
+  padding: .625rem 1.5625rem;
   background-color: $btn-default;
   border-radius: 6.25rem;
   color: #FFF;
@@ -35,6 +35,22 @@ html {
   font-family: $font-inter;
   font-size: 1rem;
   font-weight: 400;
+  text-decoration: none;
+}
+
+.btn-white {
+  @extend .btn-default;
+
+  background-color: #fcf3f6;
+  color: #91768a;
+  text-shadow: none;
+}
+
+.btn-null {
+  @extend .btn-default;
+
+  color: #91768a;
+  background-color: initial;
 }
 
 ul {
