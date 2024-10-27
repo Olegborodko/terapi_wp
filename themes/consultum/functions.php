@@ -250,6 +250,11 @@ function register_custom_blocks() {
         'title' => __('Doctors Carousel 1'),
         'template' => 'doctors-carousel-1/template.php'
       ],
+      [
+        'name' => 'doctors-4-block',
+        'title' => __('Doctors 4 block'),
+        'template' => 'doctors-4-block/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {

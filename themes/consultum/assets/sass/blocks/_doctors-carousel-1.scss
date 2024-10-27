@@ -70,14 +70,13 @@
         flex-wrap: wrap;
         justify-content: center;
       }
-    }
 
-    .swiper-slide img.photo {
-      display: block;
-      min-width: 6.5625rem;
-      padding-bottom: 1.1875rem;
+      img.photo {
+        display: block;
+        min-width: 6.5625rem;
+        padding-bottom: 1.1875rem;
+      }
     }
-
 
     .swiper-button-next,
     .swiper-button-prev {
