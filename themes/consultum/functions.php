@@ -255,6 +255,11 @@ function register_custom_blocks() {
         'title' => __('Doctors 4 block'),
         'template' => 'doctors-4-block/template.php'
       ],
+      [
+        'name' => 'experience-two-block',
+        'title' => __('Experience two block'),
+        'template' => 'experience-two-block/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {

@@ -49,6 +49,7 @@ html {
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-white {
@@ -599,5 +600,71 @@ footer .footer-menu li {
   }
   .doctors-4-block .block .mobile-block {
     padding-right: 0.625rem;
+  }
+}
+
+.experience-two-block .btns-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  gap: 0.625rem;
+}
+.experience-two-block .block {
+  background-color: #FFFFFF;
+  max-width: 25rem;
+  border-radius: 1.4375rem;
+  border: 0.075rem solid #E5E5E5;
+  text-align: right;
+  padding: 1.4375rem;
+}
+.experience-two-block .block h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 4px;
+}
+.experience-two-block .block p {
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 16px;
+}
+.experience-two-block .block .inside {
+  display: flex;
+  align-items: center;
+}
+.experience-two-block .block .inside img {
+  margin-left: 0.625rem;
+}
+.experience-two-block .content-blocks {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.experience-two-block .bottom-blocks {
+  display: flex;
+}
+.experience-two-block .bottom-blocks img {
+  padding: 0.4375rem;
+  width: 2.5rem;
+  border-radius: 0.625rem;
+  background-color: #dddde2;
+}
+.experience-two-block .bottom-blocks ul {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.experience-two-block .bottom-blocks .inside-frame {
+  margin-right: 2.5rem;
+}
+@media (max-width: 460px) {
+  .experience-two-block .bottom-blocks .inside-frame {
+    margin-right: 0.875rem;
+  }
+  .experience-two-block .bottom-blocks ul {
+    font-size: 0.75rem;
   }
 }
