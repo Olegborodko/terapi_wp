@@ -260,6 +260,11 @@ function register_custom_blocks() {
         'title' => __('Experience two block'),
         'template' => 'experience-two-block/template.php'
       ],
+      [
+        'name' => 'therapist-profile-1',
+        'title' => __('Therapist profile 1'),
+        'template' => 'therapist-profile-1/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {

@@ -1,0 +1,94 @@
+.therapist-profile-1 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 1rem;
+  gap: 3.125rem;
+
+  h1 {
+    font-size: 2.375rem;
+    font-weight: 700;
+  }
+
+  .subtext {
+    font-size: 1.125rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .btns-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .625rem;
+    padding-bottom: 2.375rem;
+
+    div {
+      border: 1px solid #91768a;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 49%;
+  }
+
+  .block-icons {
+    display: flex;
+    gap: .8125rem;
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      padding: .625rem;
+      border-radius: 1.25rem;
+      background-color: #ffffff;
+      border: 1px solid #E3D5D9;
+    }
+  }
+
+  .profile-image-block {
+    display: flex;
+    align-items: baseline;
+    flex: 1 1 51%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: .875rem;
+
+    .content {
+      text-align: center;
+    }
+
+    .btns-block,
+    .block-icons {
+      justify-content: center;
+    }
+
+    .profile-image-block {
+      justify-content: center;
+
+      img {
+        border-radius: 50%;
+        max-width: 8.75rem;
+      }
+    }
+  }
+}

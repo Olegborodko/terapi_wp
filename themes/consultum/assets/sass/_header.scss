@@ -25,6 +25,10 @@ header {
     order: 3;
   }
 
+  .navbar-nav{
+    align-items: center;
+  }
+
   @media (max-width: 960px) {
     #menu-top li{
       padding: .625rem 0;

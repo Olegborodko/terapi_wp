@@ -27,9 +27,9 @@
             Lorem ipsum dolor sit amet consectetur.
           </div>
           <div class="btn-block">
-            <a href="#" class="btn-white">תחומי התמחות</a>
-            <a href="#" class="btn-white">התמחות</a>
-            <a href="#" class="btn-white">התמחות</a>
+            <a href="#" class="btn-lavender">תחומי התמחות</a>
+            <a href="#" class="btn-lavender">התמחות</a>
+            <a href="#" class="btn-lavender">התמחות</a>
           </div>
         </div>
       <?php } ?>

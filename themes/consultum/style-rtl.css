@@ -36,7 +36,7 @@ html {
   margin: 0 auto;
 }
 
-.btn-default, .btn-null, .btn-white {
+.btn-default, .btn-null, .btn-white, .btn-lavender {
   padding: 0.625rem 1.5625rem;
   background-color: #866B7E;
   border-radius: 6.25rem;
@@ -52,8 +52,14 @@ html {
   cursor: pointer;
 }
 
-.btn-white {
+.btn-lavender {
   background-color: #fcf3f6;
+  color: #91768a;
+  text-shadow: none;
+}
+
+.btn-white {
+  background-color: #ffffff;
   color: #91768a;
   text-shadow: none;
 }
@@ -87,6 +93,9 @@ header .menu-item a {
 }
 header .logo-block {
   order: 3;
+}
+header .navbar-nav {
+  align-items: center;
 }
 @media (max-width: 960px) {
   header #menu-top li {
@@ -666,5 +675,85 @@ footer .footer-menu li {
   }
   .experience-two-block .bottom-blocks ul {
     font-size: 0.75rem;
+  }
+}
+
+.therapist-profile-1 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 1rem;
+  gap: 3.125rem;
+}
+.therapist-profile-1 h1 {
+  font-size: 2.375rem;
+  font-weight: 700;
+}
+.therapist-profile-1 .subtext {
+  font-size: 1.125rem;
+  margin-bottom: 1.75rem;
+}
+.therapist-profile-1 .btns-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  padding-bottom: 2.375rem;
+}
+.therapist-profile-1 .btns-block div {
+  border: 1px solid #91768a;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.therapist-profile-1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.therapist-profile-1 .description {
+  font-size: 1rem;
+}
+.therapist-profile-1 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 49%;
+}
+.therapist-profile-1 .block-icons {
+  display: flex;
+  gap: 0.8125rem;
+}
+.therapist-profile-1 .block-icons a {
+  display: inline-block;
+}
+.therapist-profile-1 .block-icons img {
+  padding: 0.625rem;
+  border-radius: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #E3D5D9;
+}
+.therapist-profile-1 .profile-image-block {
+  display: flex;
+  align-items: baseline;
+  flex: 1 1 51%;
+}
+.therapist-profile-1 .profile-image-block img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .therapist-profile-1 {
+    flex-direction: column-reverse;
+    gap: 0.875rem;
+  }
+  .therapist-profile-1 .content {
+    text-align: center;
+  }
+  .therapist-profile-1 .btns-block,
+  .therapist-profile-1 .block-icons {
+    justify-content: center;
+  }
+  .therapist-profile-1 .profile-image-block {
+    justify-content: center;
+  }
+  .therapist-profile-1 .profile-image-block img {
+    border-radius: 50%;
+    max-width: 8.75rem;
   }
 }

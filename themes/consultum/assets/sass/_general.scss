@@ -39,10 +39,18 @@ html {
   cursor: pointer;
 }
 
-.btn-white {
+.btn-lavender {
   @extend .btn-default;
 
   background-color: #fcf3f6;
+  color: #91768a;
+  text-shadow: none;
+}
+
+.btn-white {
+  @extend .btn-default;
+
+  background-color: #ffffff;
   color: #91768a;
   text-shadow: none;
 }
