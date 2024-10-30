@@ -202,6 +202,9 @@ require_once get_template_directory() . '/functions_parts/articles.php';
 // ============================== add custom post type doctors
 require_once get_template_directory() . '/functions_parts/doctors.php';
 
+// ============================== add pattern and category (terapy) to gutenberg
+require_once get_template_directory() . '/functions_parts/gutenberg_pattern_category.php';
+
 // ==============================
 
 function my_custom_block_categories( $categories, $post ) {
