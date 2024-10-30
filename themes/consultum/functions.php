@@ -199,6 +199,8 @@ function custom_admin_styles() {
 // ============================== add custom post type articles
 require_once get_template_directory() . '/functions_parts/articles.php';
 
+// ============================== add custom post type doctors
+require_once get_template_directory() . '/functions_parts/doctors.php';
 
 // ==============================
 
