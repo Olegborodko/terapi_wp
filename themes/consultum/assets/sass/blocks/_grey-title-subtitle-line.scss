@@ -1,0 +1,18 @@
+.grey-title-subtitle-line{
+  border-radius: 20px 0px 0px 20px;
+  // background-color: #e5dae0;
+  padding: 1.25rem 1.8125rem 1.25rem 1rem;
+  // border-right: 9px solid #866B7E;
+  margin: 0 1rem;
+
+  h3{
+    padding-bottom: .375rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  p{
+    font-size: .875rem;
+    max-width: 55rem;
+  }
+}

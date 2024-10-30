@@ -270,6 +270,11 @@ function register_custom_blocks() {
         'title' => __('Therapist profile 1'),
         'template' => 'therapist-profile-1/template.php'
       ],
+      [
+        'name' => 'grey-title-subtitle-line',
+        'title' => __('Grey Title Subtitle Line'),
+        'template' => 'grey-title-subtitle-line/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
