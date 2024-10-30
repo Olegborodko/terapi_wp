@@ -275,6 +275,11 @@ function register_custom_blocks() {
         'title' => __('Grey Title Subtitle Line'),
         'template' => 'grey-title-subtitle-line/template.php'
       ],
+      [
+        'name' => 'grey-title-subtitle',
+        'title' => __('Grey Title Subtitle'),
+        'template' => 'grey-title-subtitle/template.php'
+      ],
   ];
 
   foreach ($blocks as $block) {
