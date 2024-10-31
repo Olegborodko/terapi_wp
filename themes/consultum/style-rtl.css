@@ -77,6 +77,11 @@ p {
   margin-bottom: 0;
 }
 
+h1 {
+  font-size: 3.125rem;
+  font-weight: 800;
+}
+
 header .navbar {
   padding: 1.6875rem 0;
 }
@@ -238,7 +243,9 @@ footer .footer-menu li {
 .timeline-1 {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1.875rem;
+  padding: 0 1rem 1.875rem 1rem;
+  max-width: 77rem;
+  margin: 0 auto;
 }
 .timeline-1 div {
   display: flex;
@@ -369,6 +376,9 @@ footer .footer-menu li {
   justify-content: center;
   align-items: center;
   gap: 1.4375rem;
+  max-width: 77rem;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 .articles-6-last-blocks .block {
   display: flex;
@@ -400,6 +410,11 @@ footer .footer-menu li {
   object-fit: cover;
 }
 
+.comments-carousel-1 {
+  max-width: 77rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
 .comments-carousel-1 .swiper {
   width: 100%;
   height: 100%;
@@ -449,6 +464,11 @@ footer .footer-menu li {
   margin: 0 0.5rem;
 }
 
+.doctors-carousel-1 {
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 77rem;
+}
 .doctors-carousel-1 .filter-block {
   display: flex;
   justify-content: space-between;
@@ -690,8 +710,10 @@ footer .footer-menu li {
 .therapist-profile-1 {
   display: flex;
   flex-direction: row-reverse;
-  margin: 0 1rem;
+  padding: 0 1rem;
   gap: 3.125rem;
+  max-width: 65.75rem;
+  margin: 0 auto;
 }
 .therapist-profile-1 h1 {
   font-size: 2.375rem;
