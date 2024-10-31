@@ -142,6 +142,8 @@ add_action( 'widgets_init', 'consultum_widgets_init' );
  */
 function consultum_scripts() {
 	// wp_enqueue_style( 'consultum-style', get_stylesheet_uri(), array(), _S_VERSION );
+  wp_enqueue_style('dashicons');
+
   wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css' );
 
   wp_enqueue_style( 'swiper-css', get_template_directory_uri() . '/assets/swiper/swiper-bundle.min.css' );
@@ -214,6 +216,7 @@ function my_custom_block_categories( $categories, $post ) {
       'icon'  => 'star',
   );
   $categories[] = $new_category;
+  // array_unshift($categories, $new_category);
 
   return $categories;
 }
@@ -228,57 +231,68 @@ function register_custom_blocks() {
       [
           'name' => 'cards-1',
           'title' => __('Cards 1'),
-          'template' => 'cards-1/template.php'
+          'template' => 'cards-1/template.php',
+          'icon' => 'feedback',
       ],
       [
         'name' => 'timeline-1',
         'title' => __('Time-line 1'),
-        'template' => 'timeline-1/template.php'
+        'template' => 'timeline-1/template.php',
+        'icon' => 'chart-line',
       ],
       [
         'name' => 'articles-carousel-1',
         'title' => __('Articles-carousel 1'),
-        'template' => 'articles-carousel-1/template.php'
+        'template' => 'articles-carousel-1/template.php',
+        'icon' => 'cover-image',
       ],
       [
         'name' => 'articles-6-last-blocks',
         'title' => __('Articles 6 last blocks'),
-        'template' => 'articles-6-last-blocks/template.php'
+        'template' => 'articles-6-last-blocks/template.php',
+        'icon' => 'grid-view',
       ],
       [
         'name' => 'comments-carousel-1',
         'title' => __('Comments Carousel 1'),
-        'template' => 'comments-carousel-1/template.php'
+        'template' => 'comments-carousel-1/template.php',
+        'icon' => 'format-quote',
       ],
       [
         'name' => 'doctors-carousel-1',
         'title' => __('Doctors Carousel 1'),
-        'template' => 'doctors-carousel-1/template.php'
+        'template' => 'doctors-carousel-1/template.php',
+        'icon' => 'cover-image',
       ],
       [
         'name' => 'doctors-4-block',
         'title' => __('Doctors 4 block'),
-        'template' => 'doctors-4-block/template.php'
+        'template' => 'doctors-4-block/template.php',
+        'icon' => 'grid-view',
       ],
       [
         'name' => 'experience-two-block',
         'title' => __('Experience two block'),
-        'template' => 'experience-two-block/template.php'
+        'template' => 'experience-two-block/template.php',
+        'icon' => 'columns',
       ],
       [
         'name' => 'therapist-profile-1',
         'title' => __('Therapist profile 1'),
-        'template' => 'therapist-profile-1/template.php'
+        'template' => 'therapist-profile-1/template.php',
+        'icon' => 'id-alt',
       ],
       [
         'name' => 'grey-title-subtitle-line',
         'title' => __('Grey Title Subtitle Line'),
-        'template' => 'grey-title-subtitle-line/template.php'
+        'template' => 'grey-title-subtitle-line/template.php',
+        'icon' => 'embed-generic',
       ],
       [
         'name' => 'grey-title-subtitle',
         'title' => __('Grey Title Subtitle'),
-        'template' => 'grey-title-subtitle/template.php'
+        'template' => 'grey-title-subtitle/template.php',
+        'icon' => 'embed-generic',
       ],
   ];
 
@@ -289,7 +303,7 @@ function register_custom_blocks() {
           'description'       => __(''),
           'render_callback'   => 'render_custom_block',
           'category'          => 'terapi-category',
-          'icon'              => 'admin-comments',
+          'icon'              => $block['icon'] ?? 'admin-comments',
           'keywords'          => array('custom', 'acf'),
           'enqueue_assets'    => function () use ($block) {
               // wp_enqueue_style для каждого блока при необходимости
