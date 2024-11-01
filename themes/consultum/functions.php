@@ -294,6 +294,12 @@ function register_custom_blocks() {
         'template' => 'grey-title-subtitle/template.php',
         'icon' => 'embed-generic',
       ],
+      [
+        'name' => 'subtext-width',
+        'title' => __('Subtext Width'),
+        'template' => 'subtext-width/template.php',
+        'icon' => 'align-center',
+      ],
   ];
 
   foreach ($blocks as $block) {
@@ -349,7 +355,7 @@ function render_custom_block($block) {
   $template_path = get_template_directory() . '/blocks/' . $block_slug . '/template.php';
 
   if (file_exists($template_path)) {
-      include_once($template_path);
+      include($template_path);
   } else {
       echo 'Template not found: ' . esc_html($template_path);
   }
