@@ -840,3 +840,36 @@ footer .footer-menu li {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+.star-block {
+  background-color: #E7DCE0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.75rem 5rem;
+}
+.star-block a {
+  border: 4px solid #ffffff;
+}
+.star-block h2 {
+  padding-bottom: 0.9375rem;
+  text-align: center;
+}
+.star-block .center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.star-block .left-block {
+  transform: scaleX(-1);
+}
+@media (max-width: 1000px) {
+  .star-block .left-block,
+  .star-block .right-block {
+    display: none;
+  }
+  .star-block .center-block {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

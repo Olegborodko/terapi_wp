@@ -300,6 +300,12 @@ function register_custom_blocks() {
         'template' => 'subtext-width/template.php',
         'icon' => 'align-center',
       ],
+      [
+        'name' => 'star-block',
+        'title' => __('Star Block'),
+        'template' => 'star-block/template.php',
+        'icon' => 'star-filled',
+      ],
   ];
 
   foreach ($blocks as $block) {
